@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { habits as initialHabits, Habit, Plus, Flame, Calendar, Check } from 'lucide-react';
+import { Plus, Flame, Calendar, Check } from 'lucide-react';
+import { habits as initialHabits, Habit } from '@/lib/data';
 
 export default function HabitsPage() {
   const [habits, setHabits] = useState(initialHabits);

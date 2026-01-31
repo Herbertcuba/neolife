@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { opportunities as initialOpportunities, Opportunity, Plus, TrendingUp, Target, ArrowRight } from 'lucide-react';
+import { Plus, TrendingUp, Target, ArrowRight } from 'lucide-react';
+import { opportunities as initialOpportunities, Opportunity } from '@/lib/data';
 
 export default function OpportunitiesPage() {
   const [opportunities, setOpportunities] = useState(initialOpportunities);

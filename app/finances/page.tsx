@@ -2,15 +2,13 @@
 
 import { useState } from 'react';
 import { 
-  finances as initialFinances, 
-  Finance, 
   Plus, 
   TrendingUp, 
   TrendingDown,
   DollarSign,
-  PieChart,
   Wallet
 } from 'lucide-react';
+import { finances as initialFinances, Finance } from '@/lib/data';
 import { calculateTotalAssets, calculateTotalLiabilities, calculateNetWorth, calculateMonthlyIncome } from '@/lib/data';
 
 export default function FinancesPage() {
