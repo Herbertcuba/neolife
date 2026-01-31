@@ -6,7 +6,6 @@ import {
   DollarSign, 
   TrendingUp,
   Brain,
-  Calendar,
   Zap
 } from 'lucide-react';
 import Link from 'next/link';
