@@ -142,13 +142,14 @@ export default function OpportunitiesPage() {
             <button 
               onClick={() => {
                 if (newOpp.title && newOpp.value) {
+                  const probability = newOpp.status === 'won' ? 100 : (newOpp.probability || 50);
                   setOpportunities([...opportunities, {
                     ...newOpp,
                     id: Date.now().toString(),
-                    probability: newOpp.status === 'won' ? 100 : newOpp.probability,
+                    probability,
                     createdAt: new Date().toISOString(),
                   }]);
-                  setNewOpp({ title: '', source: '', status: 'lead', value: 0, probability: 50 });
+                  setNewOpp({ title: '', source: '', status: 'lead' as const, value: 0, probability: 50 });
                   setShowAddForm(false);
                 }
               }} 
