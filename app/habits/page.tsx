@@ -49,7 +49,8 @@ export default function HabitsPage() {
     <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-white">Habits</h1>
+        <div>
+          <h1 className="text-3xl font-bold text-white">Habits</h1>
           <p className="text-gray-400 mt-1">Consistency is what builds results</p>
         </div>
         <button 
