@@ -142,7 +142,7 @@ export default function OpportunitiesPage() {
             <button 
               onClick={() => {
                 if (newOpp.title && newOpp.value) {
-                  const probability = newOpp.status === 'won' ? 100 : (newOpp.probability || 50);
+                  const probability = newOpp.probability || 50;
                   setOpportunities([...opportunities, {
                     ...newOpp,
                     id: Date.now().toString(),
