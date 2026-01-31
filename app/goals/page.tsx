@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { goals as initialGoals, Goal, Plus, Edit2, Trash2, Target } from 'lucide-react';
+import { Plus, Edit2, Trash2, Target } from 'lucide-react';
+import { goals as initialGoals, Goal } from '@/lib/data';
 
 export default function GoalsPage() {
   const [goals, setGoals] = useState(initialGoals);
