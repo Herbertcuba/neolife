@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 26, 26, 26;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .neo-card {
+    @apply bg-neo-dark border border-neo-gray rounded-xl p-6 transition-all duration-300 hover:border-neo-green/50;
+  }
+  
+  .neo-button {
+    @apply bg-neo-green text-neo-black font-mono font-bold py-3 px-6 rounded-lg 
+           transition-all duration-200 hover:bg-neo-green-dim hover:shadow-lg hover:shadow-neo-green/20
+           active:scale-95;
+  }
+  
+  .neo-input {
+    @apply bg-neo-gray border border-neo-gray rounded-lg px-4 py-3 text-white 
+           focus:outline-none focus:border-neo-green transition-colors;
+  }
+  
+  .neo-badge {
+    @apply px-3 py-1 rounded-full text-xs font-mono font-bold;
+  }
+  
+  .neo-badge-green {
+    @apply bg-neo-green/20 text-neo-green border border-neo-green/30;
+  }
+  
+  .neo-badge-yellow {
+    @apply bg-yellow-500/20 text-yellow-500 border border-yellow-500/30;
+  }
+  
+  .neo-badge-red {
+    @apply bg-red-500/20 text-red-500 border border-red-500/30;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+}
+
+/* Animation for AI insights pulse */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  }
+}
+
+.ai-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
